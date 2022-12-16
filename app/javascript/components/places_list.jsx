@@ -56,7 +56,7 @@ export default function Placeslist(){
 	}
           return (
             <tr key={index}>
-              <td> <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={buttonMessage}>{place.name} </button></td>
+              <td> <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={buttonMessage}>{place.name} </button></td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.city}</td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.download_speed}</td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.average}</td>
