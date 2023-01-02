@@ -35,15 +35,15 @@ export default function Placeslist(){
 	
 
 	const dataSection = (
-			<div className="inline-block min-w-full shadow rounded-lg overflow-hidden"> 
-		  <table  className="min-w-full leading-normal">
+			<div className="inline-block w-full rounded-lg overflow-hidden text-sm sm:shadow-lg"> 
+		  <table className="w-full">
         <thead>
           <tr >
-          <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Place</th>
-          <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">City</th>
-          <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Download Speed</th>
-          <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Average</th>
-          <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Download Units </th>
+          <th className="text-[6px] whitespace-nowrap border-b-2 border-gray-200 bg-gray-100 text-left font-semibold text-gray-600 uppercase sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r">Place</th>
+          <th className="text-[6px] whitespace-nowrap border-b-2 border-gray-200 bg-gray-100 text-left font-semibold text-gray-600 uppercase sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r">City</th>
+          <th className="text-[6px] whitespace-nowrap border-b-2 border-gray-200 bg-gray-100 text-left font-semibold text-gray-600 uppercase sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r">Download Speed</th>
+          <th className="text-[6px] whitespace-nowrap border-b-2 border-gray-200 bg-gray-100 text-left font-semibold text-gray-600 uppercase sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r">Average</th>
+          <th className="text-[6px] whitespace-nowrap border-b-2 border-gray-200 bg-gray-100 text-left font-semibold text-gray-600 uppercase sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r">Download Units </th>
 
           </tr>
         </thead>
@@ -56,11 +56,11 @@ export default function Placeslist(){
 	}
           return (
             <tr key={index}>
-              <td> <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={buttonMessage}>{place.name} </button></td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.city}</td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.download_speed}</td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.average}</td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{place.download_units}</td>
+              <td> <button className="bg-blue-500 text-[6px] sm:text-[10px] hover:bg-blue-700 text-white font-bold px-2 sm:py-2 sm:border-r  sm:px-4 rounded-full border-gray-200 border-b" onClick={buttonMessage}>{place.name} </button></td>
+              <td className="hover:bg-gray-100 sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r whitespace-nowrap text-[6px] sm:text-[12px] px-5 py-5 border-b border-gray-200 bg-white sm:text-14px">{place.city}</td>
+              <td className="hover:bg-gray-100 sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r whitespace-nowrap text-[6px] sm:text-[12px] px-5 py-5 border-b border-gray-200 bg-white sm:text-14px">{place.download_speed}</td>
+              <td className="hover:bg-gray-100 sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r whitespace-nowrap text-[6px] sm:text-[12px] px-5 py-5 border-b border-gray-200 bg-white sm:text-14px">{place.average}</td>
+              <td className="hover:bg-gray-100 sm:px-6 sm:py-2 sm:whitespace-normal sm:text-sm sm:font-medium sm:text-gray-900 sm:border-r whitespace-nowrap text-[6px] sm:text-[12px] px-5 py-5 border-b border-gray-200 bg-white sm:text-14px">{place.download_units}</td>
             </tr>
           )
         })}
@@ -88,7 +88,7 @@ export default function Placeslist(){
 <div className="bg-white p-8 rounded-md w-full ">
 	<div className=" flex items-center justify-between pb-6">
 		<div>
-			<h2 className="text-gray-600 font-semibold text-4xl">Wi-Fi Speed Test</h2>
+			<h2 style={{ fontSize: "3vw" }} className="text-gray-600 font-semibold">Wi-Fi Test</h2>
 		</div>
 		<div className="flex items-center justify-between">
 			<div className="flex bg-gray-50 items-center p-2 rounded-md">
@@ -100,7 +100,7 @@ export default function Placeslist(){
 				</svg>
 				{//implement on change for search imput
 				}
-				<input className="bg-gray-50 outline-none ml-1 block " 
+				<input className="bg-gray-50 outline-none w-24 sm:w-64 ml-1 " 
 						type="text" 
 						name="" 
 						id="" 
@@ -110,8 +110,8 @@ export default function Placeslist(){
           
 
           </div>
-				<div className="lg:ml-40 ml-10 space-x-8">
-				<Link to="/new-internet-speed" className="btn bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New Log
+				<div className="ml-1">
+				<Link to="/new-internet-speed" className="btn bg-indigo-600 rounded-md text-white font-semibold cursor-pointer sm:text-[14px] text-[6px] sm:ml-2 sm:p-3 ml-1 p-1">New Log
 					</Link>
 				</div>
 			</div>
